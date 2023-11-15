@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tugas_Project_akhir;
 
 namespace Pendaftaran_Filkom_Day
 {
@@ -16,7 +17,7 @@ namespace Pendaftaran_Filkom_Day
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pendaftaran());
+            Application.Run(new Login());
         }
     }
 }

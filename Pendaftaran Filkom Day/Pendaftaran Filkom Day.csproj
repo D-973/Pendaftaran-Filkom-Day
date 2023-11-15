@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,17 +53,128 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CRBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CRBus.Designer.cs">
+      <DependentUpon>CRBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CRPendaftaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CRPendaftaran.Designer.cs">
+      <DependentUpon>CRPendaftaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrystalReport1.cs">
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Forms\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBus.Designer.cs">
+      <DependentUpon>FormBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDPendaftaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDPendaftaran.Designer.cs">
+      <DependentUpon>FormDPendaftaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPF.Designer.cs">
+      <DependentUpon>FormPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pend.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pend.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Tampbus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tampbus.Designer.cs">
+      <DependentUpon>Tampbus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pendaftaran.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pendaftaran.Designer.cs">
       <DependentUpon>Pendaftaran.cs</DependentUpon>
     </Compile>
+    <Compile Include="PendaftaranDataOnly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PendaftaranDataOnly.Designer.cs">
+      <DependentUpon>PendaftaranDataOnly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Forms\CRBus.resx">
+      <DependentUpon>CRBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CRPendaftaran.resx">
+      <DependentUpon>CRPendaftaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBus.resx">
+      <DependentUpon>FormBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDPendaftaran.resx">
+      <DependentUpon>FormDPendaftaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPF.resx">
+      <DependentUpon>FormPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pend.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Pend.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tampbus.resx">
+      <DependentUpon>Tampbus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pendaftaran.resx">
       <DependentUpon>Pendaftaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PendaftaranDataOnly.resx">
+      <DependentUpon>PendaftaranDataOnly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

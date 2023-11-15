@@ -4,31 +4,28 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tugas_Project_akhir;
 using TampilBus;
 
 namespace Pendaftaran_Filkom_Day
 {
-    public partial class Pendaftaran : Form
+    public partial class PendaftaranDataOnly : Form
     {
         //Fields
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
-        
+
         //Constructor
-        public Pendaftaran()
+        public PendaftaranDataOnly()
         {
             InitializeComponent();
             random = new Random();
 
             btnCloseChildForm.Visible = false;
-
         }
 
         //methods
@@ -69,7 +66,7 @@ namespace Pendaftaran_Filkom_Day
         }
         private void DisableButton()
         {
-            foreach(Control previousBtn in panelMenu.Controls)
+            foreach (Control previousBtn in panelMenu.Controls)
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
@@ -79,7 +76,6 @@ namespace Pendaftaran_Filkom_Day
                 }
             }
         }
-
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -97,54 +93,6 @@ namespace Pendaftaran_Filkom_Day
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-
-        private void Pendaftaran_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPendaftaran_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormPF(), sender);
-        }
-
-       
-        private void btnDPendaftaran_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormDPendaftaran(), sender);
-        }
-
-        private void btnDBus_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Tampbus(), sender);
-        }
-
-        private void btnHelp_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.Help(), sender);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHelp_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.Help() ,sender);
-        }
-
-        private void btnCloseChildForm_Click(object sender, EventArgs e)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-            Reset();
-        }
         private void Reset()
         {
             DisableButton();
@@ -154,6 +102,33 @@ namespace Pendaftaran_Filkom_Day
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
+        private void PendaftaranDataOnly_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDPendaftaran_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormDPendaftaran(), sender);
+        }
+
+        private void btnDBus_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Tampbus(), sender);
+        }
+
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            Reset();
+        }
+       
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnCRPendaftaran_Click(object sender, EventArgs e)
         {
@@ -162,12 +137,12 @@ namespace Pendaftaran_Filkom_Day
 
         private void btnCRBus_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.CRBus() ,sender);
+            OpenChildForm(new Forms.CRBus(), sender);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormBus(), sender);
+
         }
     }
 }
